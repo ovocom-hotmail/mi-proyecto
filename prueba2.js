@@ -1,3 +1,3 @@
 function saludo3(){
-    alert("Hola a todo el mundo");
+    alert("Hello word");
 }
