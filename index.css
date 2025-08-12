@@ -1,0 +1,19 @@
+body {
+    background-color: gray;
+}
+
+h1 {
+    color: violet;
+}
+
+.parrafo-rojo {
+    background-color: red;
+    color: white;
+    padding: 50px;
+}
+
+.parrafo-verde {
+    background-color: green;
+    color: black;
+    padding: 50px;
+}

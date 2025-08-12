@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi proyecto versionado</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div>
+        <h1 id="miElemento">Mi proyecto versionado.</h1>
+        <div class="contenido-principal">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p class="parrafo-evento parrafo-verde" >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.......nueva modificacion
+            </p>
+            <p class="parrafo-evento parrafo-rojo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.......nueva modificacion
+            </p>
+        </div>
+        <form>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellido" placeholder="Apellido">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <form style="background-color: red; padding: 10px; color:white;">
+            <div style="background-color: blue; padding: 10px; color:white;">
+                <p class="parrafo-otro-evento" style="background-color: red; padding:10px; color:white"> Nuestro
+                    formulario</p>
+                <input type="button" value="clickMe">
+            </div>
+        </form>
+    </div>
+    <script>
+
+        window.onload = function () {
+            // console.log('El documento se ha cargado nuevamente en el paso 2');
+        }
+
+        window.onresize = function () {
+            // console.log('El documento se ha modificado en tamaño');
+        }
+
+        function perdidaFoco() {
+            //console.log('El campo se ha perdido el foco');
+        }
+
+        function cambioInput() {
+            //   console.log('se ha producido un cambio en el input')
+        }
+
+        function entradaInput(event) {
+            // console.log("El evento fue gatillado desde: ", event.target.id);
+            // console.log("El evento tiene el valor: ", event.target.value);
+        }
+
+        function onSubmit(event) {
+            // console.log(event)
+            event.preventDefault();
+        }
+
+        function onKey(event) {
+            console.log(event)
+        }
+
+        function onClick(event) {
+            //console.log(event)
+            mensaje = `hemos hecho click en el ${event.target.innerText}`
+            console.log(mensaje)
+            event.stopPropagation();
+        }
+
+        function onDoubleClick(event) {
+            console.log(event)
+            mensaje = `hemos hecho doble click en el ${event.target.innerText}`
+            console.log(mensaje)
+        }
+
+        function onMouseLeave(event) {
+            console.log("Sali del elemento", event.target)
+        }
+
+        function onMouseEnter(event) {
+            console.log("Entre en el  elemento", event.target)
+        }
+
+        let lamdaOnClick = event => {
+            console.log("hemos hecho click");
+            console.log("en el elemento", event.target)
+            //event.stopPropagation();
+        };
+
+
+
+    </script>
+
+</body>
+
+</html>
